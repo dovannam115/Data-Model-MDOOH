@@ -405,10 +405,10 @@ hr{border:none;border-top:1px solid rgba(255,255,255,.05);margin:16px 0}
           <tr><td><span class="fn">user_tier</span></td><td><span style="color:var(--sage)">100%</span></td><td><span class="chip ca">Hàng tuần</span></td><td>Không</td><td>Mặc định "mới"</td></tr>
           <tr><td><span class="fn">trips_per_week_avg</span></td><td><span style="color:var(--sage)">100%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Trung bình - tính mùa vụ</td><td>Dùng giá trị trung vị toàn hệ thống</td></tr>
           <tr><td><span class="fn">peak_hour_ratio</span></td><td><span style="color:var(--gold)">78%</span> (&lt;5 chuyến)</td><td><span class="chip ca">Hàng ngày</span></td><td>Cao nếu &lt;10 chuyến</td><td>Hội tụ về prior (0.35) - Bayesian smoothing</td></tr>
-          <tr><td><span class="fn">weekend_ratio</span></td><td><span style="color:var(--gold)">78%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Cao nếu &lt;10 chuyến</td><td>Hội tụ về prior (0.30)</td></tr>
-          <tr><td><span class="fn">poi_affinity[5]</span></td><td><span style="color:var(--gold)">65%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Cao - nhiễu từ POI mapping</td><td>Phân phối đều (uniform prior)</td></tr>
+          <tr><td><span class="fn">weekend_ratio</span></td><td><span style="color:var(--gold)">78%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Cao nếu &lt;10 chuyến</td><td>Hội tụ về prior (0.30) - Bayesian smoothing</td></tr>
+          <tr><td><span class="fn">poi_affinity[5]</span></td><td><span style="color:var(--gold)">65%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Cao - nhiễu từ POI mapping</td><td>Phân phối đều</td></tr>
           <tr><td><span class="fn">dominant_zone</span></td><td><span style="color:var(--sage)">82%</span></td><td><span class="chip ca">Hàng ngày</span></td><td>Trung bình</td><td>Quận phổ biến nhất trong thành phố</td></tr>
-          <tr><td><span class="fn">avg_trip_duration</span></td><td><span style="color:var(--sage)">~85%</span> (chuyến hoàn thành)</td><td><span class="chip ca">Hàng ngày</span></td><td>Trung bình - phụ thuộc hoàn tất hành trình</td><td>Trung vị theo nhóm người dùng hoặc trung vị thành phố</td></tr>
+          <tr><td><span class="fn">avg_trip_duration</span></td><td><span style="color:var(--sage)">100%</span></td><td><span class="chip ca">Hàng ngày</span></td><td></td></tr>
           <tr><td><span class="fn">cluster_id</span></td><td><span style="color:var(--gold)">60%</span> (&gt;10 chuyến)</td><td><span class="chip cv">Hàng tuần</span></td><td>Thấp</td><td>Nhóm "general" (K+1)</td></tr>
         </tbody>
       </table>
@@ -536,7 +536,7 @@ cross = {
           <tr><td><span class="fn">peak_hour_ratio</span></td><td>Chuyến 7–9h / tổng chuyến</td><td>Nhận diện nhóm đi làm</td></tr>
           <tr><td><span class="fn">weekend_ratio</span></td><td>Chuyến T7+CN / tổng chuyến</td><td>Nhận diện nhóm giải trí</td></tr>
           <tr><td><span class="fn">poi_affinity_vector[5]</span></td><td>% chuyến kết thúc tại mỗi loại POI</td><td>Normalize thành phân phối xác suất</td></tr>
-          <tr><td><span class="fn">avg_trip_duration</span></td><td>Trung bình (end_time - start_time) chuyến hoàn thành</td><td>Loại chuyến hủy/bất thường</td></tr>
+          <tr><td><span class="fn">avg_trip_duration</span></td><td>Trung bình (end_time - start_time)</td><td>Loại chuyến hủy/bất thường</td></tr>
           <tr><td><span class="fn">dominant_pickup_zone</span></td><td>Quận phổ biến nhất khi đón</td><td>Mã hóa one-hot hoặc embedding</td></tr>
           <tr><td><span class="fn">dominant_dropoff_zone</span></td><td>Quận phổ biến nhất khi trả</td><td>Mã hóa one-hot hoặc embedding</td></tr>
           <tr><td><span class="fn">airport_trip_ratio</span></td><td>% chuyến đến/từ sân bay</td><td>Nhận diện nhóm du lịch/công tác</td></tr>
